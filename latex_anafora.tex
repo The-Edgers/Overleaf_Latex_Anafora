@@ -1,0 +1,126 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title{Data Analysis Application - "The Edgers"}
+\author{Team The Edgers}
+\date{13/05/2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+For our Software Technology course, we developed a web-based data analysis application. It includes tools for data loading, 2D visualizations, data exploration, and comparing classification and clustering algorithms.
+
+\section{Development}
+We built the app using R and the Shiny framework. Key packages include \texttt{shiny}, \texttt{readr}, \texttt{ggplot2}, \texttt{plotly}, \texttt{caret}, \texttt{randomForest}, \texttt{cluster}, and \texttt{Rtsne}.
+
+\section{Functionality}
+Here's what our app can do:
+
+\subsection{Data Loading}
+Users can load CSV or Excel files using \texttt{fileInput}, \texttt{read\_csv}, and \texttt{read\_excel}.
+
+\subsection{2D Visualizations}
+We support PCA and t-SNE for 2D data projections. Users choose the method with \texttt{radioButtons} and view interactive plots with \texttt{plotly}.
+
+\subsection{Exploratory Data Analysis (EDA)}
+Users can explore data with histograms and boxplots. They select the chart type with \texttt{radioButtons}, and \texttt{ggplot2} generates the plots for each data column.
+
+\subsection{Comparing Machine Learning Algorithms}
+Our app compares classification and clustering algorithms.
+
+\subsubsection{Classification Algorithm Comparison}
+Compare Logistic Regression and Random Forest classifiers. Users can adjust parameters like the C value for Logistic Regression and the number of trees for Random Forest.
+
+\subsubsection{Clustering Algorithm Comparison}
+Compare K-Means and Hierarchical Clustering. Users specify the number of clusters for each algorithm.
+
+
+\section{Team Collaboration}
+Our team, The Edgers, worked on this project together in person, collaborating on all aspects of the development. We also used a GitHub repository to manage our code and documents. You can check out our GitHub repo here:
+\url{https://github.com/The-Edgers/RShiny}.
+
+\section{Using the App}
+\subsection{}Using our application is straightforward. Users start by uploading their data in CSV or Excel format. Once the data is loaded, they can navigate through the various tabs to perform different analyses.
+
+\subsection{}For 2D visualizations, users select the desired projection method (PCA or t-SNE) and view the resulting plots interactively.  We've attatcherd some screenshots below to showcase the results of a random dataset we made.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{PCA.png}
+    \caption{PCA}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{T-SNE.png}
+    \caption{T-SNE}
+\end{figure}
+
+\subsection{}The EDA section allows users to choose between histograms and boxplots to explore the distributions and characteristics of their data columns.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Histograms.png}
+    \caption{Histograms}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Boxplots.png}
+    \caption{Boxplots}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Comparison.png}
+    \caption{Comparison}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Info.png}
+    \caption{Info}
+\end{figure}
+
+\section{Latex}We used overleaf to create our final report as per the instructions along with latex. the latex file is available in a separate repository in the organization's GitHub:
+\url{https://github.com/The-Edgers/Overleaf_Latex_Anafora}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Latex.png}
+    \caption{Latex}
+\end{figure}
+
+\section{Conclusion}The results of the comparisons between the algorithms can be found in the screenshots we've provided above.
+In conclusion, the app can be used as a very powerful tool for data analysis because of its accurate and productive visualization produced with the charts.  Our application successfully demonstrates the capabilities of R and Shiny in creating interactive and user-friendly data analysis tools.
+
+\section{Life Cycle Model}
+We have decided to use Agile for our Life Cycle model because it will allow us to adapt to changes quickly and iteratively improve the application based on user feedback.
+
+\subsection{Life Cycle Stages}
+Identify key stakeholders
+
+Create a backlog of features and prioritize features based on importance and user needs.
+
+Implement the user interface (ui) and server logic (server) iteratively,
+start with basic features and gradually add more complex functionalities,
+continuously test and integrate new code.
+
+Conduct integration tests to ensure components work together seamlessly.
+
+Monitor the application's performance and address any issues promptly and gather continuous feedback and iterate on new features.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{image.png}
+    \caption{names}
+\end{figure}
+
+\section{Uml Diagram}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Untitled-Diagram-drawio-1.png}
+    \caption{Diagram}
+\end{figure}
+\end{document}
